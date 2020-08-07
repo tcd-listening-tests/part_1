@@ -1,0 +1,293 @@
+testname: webMUSHRA Decoder Listening Test
+testId: Ambisonic_Decoder_Test
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: >
+        Welcome to the TCD Spatial Audio Listening Test <br/> <br/> 
+        There are two parts to this test; a short training session to familiarize yourself with the test interface, and the test itself. <br/> <br/>
+        Once the test is finished, please fill out the questionnaire and press submit. <br/> <br/>
+        You may take a break, or pull out from doing the test at any time if you wish to do so. <br/> <br/>
+        The next page will contain the detailed instructions for the test. Please read this carefully before proceeding. <br/><br/><br/>
+        Thank you!
+        
+    - type: generic
+      id: ListInstructions
+      name: Familiarization of training phase
+      content: > 
+        Thanks for taking part in this experiment. Please read the following instructions before beginning the test. <br/><br/>
+        The first step in this listening test is to become familiar with the testing process. This phase is called a training phase and it precedes the formal evaluation phase.  <br/> <br/>
+        The purpose of the training phase is to allow you, as an evaluator, to learn how to use the test interface and the grading scale.  <br/>
+        In the training phase you will be able to listen to some sound excerpts which are different from the reference recording in a variety of ways, as specified in the different test questions.  <br/> <br/>
+        Using the test interface, you may click on different buttons to listen to different sound excerpts.  <br/>
+        There are also two sliders under the waveform of the audio file, these can be dragged at any time to loop over the chosen range of the selected audio file.  <br/> <br/>
+        In this way you can learn to appreciate a range of different levels of quality for different recordings in terms of a variety of different attributes, as outlined in the next section. 
+        No grades given during the training phase will be taken into account in the true tests.  <br/> <br/>
+        A comfortable volume and listening level should be set and fixed during the training phase. No adjustments to the playback level should take place during the test itself.  <br/> <br/>
+        During the training phase you should be able to learn how you, as an individual, interpret the audible impairments in terms of the grading scale.  <br/> <br/>
+
+    - type: generic
+      id: blindGrade
+      name: Blind grading phase
+      content: >         
+        The aim of the blind grading phase is to rate the quality of each stimulus compared to a reference recording, under a number of specific criteria.  <br/>
+        Please note that the reference recording represents the most accurate representation of the original source signal that is presented,  <br/>
+        and you should base your quality judgements on how closely the test signals match the reference, under the following criteria.  <br/> <br/>
+        
+        Test Criteria and Attributes  <br/> <br/>
+        LOCALISATION – how closely the perceived direction (both horizontal and elevation) of the test signal or signals matches the perceived direction of the given reference.  <br/>
+        LOCATEDNESS – the degree to which the test signals are as focused in a single point in space, or can be said to be clearly in a particular location, as the given reference  <br/>  <br/>
+        Each trial will contain 5 signals to be graded. You should listen to the reference, and all the test items by clicking on the respective buttons.  <br/>
+        You may listen to the signals in any order, any number of times.  <br/> <br/>
+        Use the slider for each signal to indicate your opinion of its quality under the given heading. When you are satisfied with your grading of all signals you should click on the “Next” button at the bottom of the screen. 
+        The grading scale is a continuous scale, divided into 5 general tiers; “Excellent”, "Good", "Fair", "Poor", “Bad”.  <br/> <br/>
+        In evaluating the sound excerpts, please note that you should not necessarily give a grade in the “bad” category to the sound excerpt with the lowest quality in the test.
+        However one (or more) excerpts must be given a grade of 100 because the unprocessed reference signal is included as one of the excerpts to be graded.
+        Please listen to entire sample before starting playback a different recording.  <br/><br/>
+
+    - type: generic
+      id: Interface
+      name:  User Interface
+      content: >  
+        Each page contains 5 test recordings (including a hidden reference recording), each with a slider for grading. The reference recording is located to the left of the sliders, under "reference"  <br/>  <br/>
+        The overall experiment consists of a total of 24 questions, and is divided into two seperate tests of 10 and 14 questions respectively, to allow for a quick break at the midway point of the experiment. The next page contains a training test, which can be used to familiarize yourself with the test interface. <br/><br/>
+        Once you are happy with your responses for a test, click the Next button to continue to the next page. Please note that at least one recording must be rated at 100 before you can proceed to the next page. <br/> <br/>
+        Please evaluate all recordings and not just the ones you deem to be of a high quality. Give each recording a fair score compared to the ideal recording i.e. the reference recording. <br/>
+        
+    - type: mushra
+      id: Training
+      name: TRAINING - EXAMPLE TEST - LOCALISATION ACCURACY
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived direction (both horizontal and elevation) of the source matches the perceived direction in the given reference. <br/> A rating of 100 indicates that the direction of the test signal is identical to the direction of the given reference.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/training/training_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/training/training_anchor.wav
+          C2: configs/resources/audio/training/training_harpex.wav
+          C3: configs/resources/audio/training/training_DTS.wav
+          C4: configs/resources/audio/training/training_allrad.wav
+    - type: generic
+      id: testStart
+      name:  Start of Test
+      content: >  
+        The training phase is now complete. Pressing "next" will take you to the first question of part one of this test, which contains 10 questions. <br/> <br/> 
+        Once you are happy with your responses, click the "next" button to continue to the next page. You may press the back button to return to any previous test if needed.  <br/> <br/>
+        Please note that at least one recording must be rated at 100 before you can proceed to the next page.
+        Please evaluate all recordings and not just the ones you deem to be of a high quality. Give each recording a fair score compared to the ideal recording i.e. the reference recording.
+    - type: mushra
+      id: Test 1
+      name: TEST 1 - LOCALISATION ACCURACY
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived direction (both horizontal and elevation) of the source matches the perceived direction in the given reference. <br/> A rating of 100 indicates that the direction of the test signal is identical to the direction of the given reference. 
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_1/test_1_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_1/test_1_allrad.wav
+          C2: configs/resources/audio/Test_1/test_1_harpex.wav
+          C3: configs/resources/audio/Test_1/test_1_anchor.wav
+          C4: configs/resources/audio/Test_1/test_1_DTS_s.wav
+    - type: mushra
+      id: Test 2
+      name: TEST 2 - LOCALISATION ACCURACY
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived direction (both horizontal and elevation) of the source matches the perceived direction in the given reference. <br/> A rating of 100 indicates that the direction of the test signal is identical to the direction of the given reference.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_2/test_2_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_2/test_2_allrad.wav
+          C2: configs/resources/audio/Test_2/test_2_harpex.wav
+          C3: configs/resources/audio/Test_2/test_2_anchor.wav
+          C4: configs/resources/audio/Test_2/test_2_DTS_s.wav
+    - type: mushra
+      id: Test 3
+      name: TEST 3 - LOCALISATION ACCURACY
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived direction (both horizontal and elevation) of the source matches the perceived direction in the given reference. <br/> A rating of 100 indicates that the direction of the test signal is identical to the direction of the given reference.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_3/test_3_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_3/test_3_allrad.wav
+          C2: configs/resources/audio/Test_3/test_3_harpex.wav
+          C3: configs/resources/audio/Test_3/test_3_anchor.wav
+          C4: configs/resources/audio/Test_3/test_3_DTS_s.wav    
+    - type: mushra
+      id: Test 4
+      name: TEST 4 - LOCALISATION ACCURACY
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived direction (both horizontal and elevation) of the source matches the perceived direction in the given reference. <br/> A rating of 100 indicates that the direction of the test signal is identical to the direction of the given reference.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_4/test_4_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_4/test_4_allrad.wav
+          C2: configs/resources/audio/Test_4/test_4_harpex.wav
+          C3: configs/resources/audio/Test_4/test_4_anchor.wav
+          C4: configs/resources/audio/Test_4/test_4_DTS_s.wav
+    - type: mushra
+      id: Test 5
+      name: TEST 5 - SOURCE LOCALISATION
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived directions (both horizontal and elevation) of the two sources in each test signal matches the perceived direction of the two sources in the given reference. <br/> A rating of 100 indicates that the signals are identical to the given reference in terms of this specific attribute.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_5/test_5_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_5/test_5_allrad.wav
+          C2: configs/resources/audio/Test_5/test_5_harpex.wav
+          C3: configs/resources/audio/Test_5/test_5_anchor.wav
+          C4: configs/resources/audio/Test_5/test_5_DTS.wav       
+    - type: mushra
+      id: Test 6
+      name: TEST 6 - SOURCE LOCALISATION
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived directions (both horizontal and elevation) of the two sources in each test signal matches the perceived direction of the two sources in the given reference. <br/> A rating of 100 indicates that the signals are identical to the given reference in terms of this specific attribute.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_6/test_6_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_6/test_6_allrad.wav
+          C2: configs/resources/audio/Test_6/test_6_harpex.wav
+          C3: configs/resources/audio/Test_6/test_6_anchor.wav
+          C4: configs/resources/audio/Test_6/test_6_DTS.wav
+    - type: mushra
+      id: Test 7
+      name: TEST 7 - SOURCE LOCALISATION
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived directions (both horizontal and elevation) of the two sources in each test signal matches the perceived direction of the two sources in the given reference. <br/> A rating of 100 indicates that the signals are identical to the given reference in terms of this specific attribute.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_7/test_7_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_7/test_7_allrad.wav
+          C2: configs/resources/audio/Test_7/test_7_harpex.wav
+          C3: configs/resources/audio/Test_7/test_7_anchor.wav
+          C4: configs/resources/audio/Test_7/test_7_DTS_s.wav
+    - type: mushra
+      id: Test 8
+      name: TEST 8 - SOURCE LOCALISATION
+      content: Please rate the test signals from 0-100 in terms of how closely the perceived directions (both horizontal and elevation) of the two sources in each test signal matches the perceived direction of the two sources in the given reference. <br/> A rating of 100 indicates that the signals are identical to the given reference in terms of this specific attribute.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_8/test_8_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_8/test_8_allrad.wav
+          C2: configs/resources/audio/Test_8/test_8_harpex.wav
+          C3: configs/resources/audio/Test_8/test_8_anchor.wav
+          C4: configs/resources/audio/Test_8/test_8_DTS_s.wav
+    - type: mushra
+      id: Test 9
+      name: TEST 9 - LOCATEDNESS
+      content: Please rate the test signals from 0-100 in terms of how closely the locatedness (i.e. the degree to which the source is focused in a single point in space, or can be said to be clearly in a particular location,) of the source matches the perceived locatedness of the given reference. <br/> A rating of 100 indicates that the signal is identical to the given reference in terms of this specific attribute.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_9/Test9_ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_9/Test9_AllRAD.wav
+          C2: configs/resources/audio/Test_9/Test9_Harpex.wav
+          C3: configs/resources/audio/Test_9/Test9_Anchor.wav
+          C4: configs/resources/audio/Test_9/Test9_DTS.wav
+    - type: mushra
+      id: Test 10
+      name: TEST 10 - LOCATEDNESS
+      content: Please rate the test signals from 0-100 in terms of how closely the locatedness (i.e. the degree to which the source is focused in a single point in space, or can be said to be clearly in a particular location,) of the source matches the perceived locatedness of the given reference. <br/> A rating of 100 indicates that the signal is identical to the given reference in terms of this specific attribute.
+      showWaveform: true
+      enableLooping: true 
+      randomize: true
+      reference: configs/resources/audio/Test_10/Test10_Ref.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/Test_10/Test10_allRAD.wav
+          C2: configs/resources/audio/Test_10/Test10_Harpex.wav
+          C3: configs/resources/audio/Test_10/Test10_Anchor.wav
+          C4: configs/resources/audio/Test_10/Test10_DTS.wav
+    - type: generic
+      id: endWarn
+      name: End of the test
+      content: >         
+        Before pressing "next" on this page, please ensure that you have rated every recording, and that at least one recording per test has a rating of 100. <br/><br/>
+        Once you press "next" you will not be able to go back. Pressing next will bring you to a quick questionnaire, please fill out every section. <br/>  <br/>
+        Once the questionnaire has been completed, please press the "Submit results" button, which will display results on screen. Please copy these results, and send them in an email to  <br/> <br/>
+        enda.bates@adaptcentre.ie. 
+
+    - type: finish
+      name: Thank you
+      content: Thank you for attending!
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: eMail
+            name: email
+          - type: number
+            label: Age
+            name: age
+            min: 0
+            max: 100
+            default: 20
+          - type: likert
+            name: gender
+            label: Gender
+            response:
+             - value: female
+               label: Female
+             - value: male
+               label: Male
+             - value: other
+               label: Other
+          - type: likert
+            name: experience
+            label: Listening Test Experience
+            response:
+             - value: none
+               label: None
+             - value: little
+               label: Little (1 or 2 previous tests)
+             - value: extensive
+               label: Considerable (Many Tests, Trained Listener)
+          - type: likert
+            name: detail
+            label: Do you work with Audio professionally? If so, for how long?
+            response: 
+             - value: none
+               label: 0 years
+             - value: little
+               label: 1-3 years
+             - value: intermed
+               label: 3-5 years
+             - value: extensive
+               label: 5+ years     
+    
