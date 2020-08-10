@@ -13,7 +13,7 @@ pages:
       content: >
         Welcome to the TCD Spatial Audio Listening Test <br/> <br/> 
         There are two parts to this test; this first part contains a short training session to familiarize yourself with the test interface, and the test itself. <br/> <br/>
-        Once each part of this test is finished, please fill out the questionnaire, press submit and send the result via email to. <br/> 
+        Once each part of this test is finished, please fill out the questionnaire, press "Send results" and send the result via email to. <br/> 
         enda.bates@adaptcentre.ie <br/><br/>
         You may take a break, or pull out from doing the test at any time if you wish to do so. We suggest you take a break in between part 1 and part 2 of the test. <br/> <br/>
         The next page will contain the detailed instructions for the test. Please read this carefully before proceeding. <br/><br/><br/>
@@ -84,7 +84,7 @@ pages:
         The training phase is now complete. Pressing "next" will take you to the first question of part one of this test, which contains 10 questions. <br/> <br/> 
         Once you are happy with your responses, click the "next" button to continue to the next page. You may press the back button to return to any previous test if needed.  <br/> <br/>
         Please note that at least one recording must be rated at 100 before you can proceed to the next page.
-        Please evaluate all recordings and not just the ones you deem to be of a high quality. Give each recording a fair score compared to the ideal recording i.e. the reference recording.
+        Please evaluate all recordings and not just the ones you deem to be of a high quality. Give each recording a fair score compared to the ideal recording i.e. the reference recording, in terms of the specific attribute being evaluated.
     - type: mushra
       id: Test 1
       name: TEST 1 - LOCALISATION ACCURACY
@@ -241,7 +241,7 @@ pages:
       content: >         
         Before pressing "next" on this page, please ensure that you have rated every recording, and that at least one recording per test has a rating of 100. <br/><br/>
         Once you press "next" you will not be able to go back. Pressing next will bring you to a quick questionnaire, please fill out every section. <br/>  <br/>
-        Once the questionnaire has been completed, please press the "Submit results" button, which will display results on screen. Please copy these results, and send them in an email to  <br/> <br/>
+        Once the questionnaire has been completed, please press the "Send results" button, which will display results on screen. Please copy these results, and send them in an email to  <br/> <br/>
         enda.bates@adaptcentre.ie. 
 
     - type: finish
@@ -260,8 +260,12 @@ pages:
              - value: <20
                label: <20
              - value: 20-30
+               label: 20-30
+             - value: 30-40
                label: 30-40
              - value: 40-50
+               label: 40-50
+             - value: 50-60
                label: 50-60
              - value: 60+
                label: 60+
